@@ -10,4 +10,4 @@ Esse projeto será realizado no GitHub
 :package: nova funcionalidade
 :up: atualização
 :bug: correção de bug
-release
+:checkred_flag: release
