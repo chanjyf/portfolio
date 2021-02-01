@@ -33,7 +33,6 @@
 
 .show-menu .hamburguer{
     right: 16rem;
-
 }
 
 .line{
@@ -43,7 +42,7 @@
     box-shadow: 0.1rem 0.1rem 1px #000000;
     transition: transform 1s;
 }
-/* NOT WORKING
+
 .show-menu #line1{
     transform: rotate(45deg) translate(.3rem, .45rem);
 }
@@ -56,7 +55,6 @@
 .show-menu #line3{
     transform: rotate(-45deg) translate(.3rem, -.45rem);
 }
-*/
 
 .hamburguer span{
     position: absolute;
@@ -66,7 +64,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(153, 101, 21);
+    background-color: rgb(21, 144, 153);
     color: #ffffff;
     font-family: var(--font-action);
     opacity: 0;
@@ -75,7 +73,7 @@
 .hamburguer span::before{
     content: "";
     position: absolute;
-    border-right: .5rem solid rgb(153, 101, 21);
+    border-right: .5rem solid rgb(21, 144, 153);
     border-top: .5rem solid transparent;
     border-left: .5rem solid transparent;
     border-bottom: .5rem solid transparent;
@@ -149,9 +147,9 @@ header{
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: .1rem;
-    background: #1e130c;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #9a8478, #1e130c);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #9a8478, #1e130c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #50C9C3;  
+    background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3); 
+    background: linear-gradient(to right, #96DEDA, #50C9C3); 
     font-family: var(--font-action);
     cursor: pointer;
     opacity: 0;
@@ -180,6 +178,7 @@ header{
     top: 0;
     right: -20rem;
     transition: all 1s;
+    z-index: 150;
 }
 
 .show-menu .sidebar{
@@ -221,7 +220,7 @@ header{
 }
 
 .social-media i{
-    background-color: rgb(153, 101, 21);
+    background-color: rgb(21, 144, 153);
     color:rgba(255, 255, 255,1);
     height: 2.5rem;
     width: 2.5rem;
@@ -234,7 +233,7 @@ header{
 }
 
 .social-media i:hover{
-    background-color: rgb(183, 131, 51);
+    background-color: rgb(61, 182, 190);;
 }
 
 
@@ -280,12 +279,14 @@ header{
     align-items: center;
     justify-content: center;
 }
+/* not working on other headers */
 
 .sessao-header h1{
     font-family: var(--font-primary);
     font-size: 3rem;
     color: #555555;
     border-bottom: solid 3px #555555;
+    margin-bottom: 2rem;
 }
 
 .conhecimento-header{
@@ -378,16 +379,20 @@ header{
     width: 80%;
 }
 
-.card-info button{
-    padding: .5rem 1rem;
+.btn{
     color: #ffffff;
     border: linear-gradient(to right, #96DEDA, #50C9C3);
     font-weight: 600;
-    background: #50C9C3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #96DEDA, #50C9C3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #50C9C3;
+    background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3);
+    background: linear-gradient(to right, #96DEDA, #50C9C3);
     font-family: var(--font-action);
     cursor: pointer;
+    text-transform: uppercase;
+}
+
+.card-info button{
+    padding: .5rem 1rem;
 }
 
 .card:hover .card-info{
@@ -395,3 +400,242 @@ header{
     opacity: 1;
     visibility: visible;
 }
+
+.sessao-contato{
+    width: 100%;
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato-wrapper{
+    width: 60%;
+    height: 30rem;
+    display: flex;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, .5);
+}
+
+.contato-left{
+    width: 35%;
+    background: 
+        linear-gradient(rgba(15, 15, 15, .6), rgba(22, 22, 22, .9)),
+        url(imagens/abstract.jpg);
+    background-size: cover;
+}
+
+.contato-right{
+    width: 65%;
+    background-color: #eeeeee;
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+.sessao-contato h1{
+    font-family: var(--font-primary);
+    width: 100%;
+    text-align: center;
+    color: #272727;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.sessao-contato form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group{
+    position: relative;
+}
+
+.field{
+    background: transparent;
+    border: none;
+    width: 20rem;
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+    border-bottom: 2px dashed#646464;
+    height: 3rem;
+    outline: none;
+    margin: 1rem 0;
+}
+
+.field-label{
+    position: absolute;
+    left: 0%;
+    top: 2rem;
+    font-size: 1.2rem;
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.field:focus ~ label{
+    top: 0;
+    font-size: 1rem;
+}
+
+.input-group textarea{
+    max-width: 25rem;
+    max-height: 8rem;
+}
+
+.field:focus{
+    border-bottom: 1px solid;
+}
+
+.btn-submit{
+    font-size: 1.2rem;
+    width: 100%;
+    height: 2rem;
+    margin-top: 1rem;
+}
+
+.preenchido{
+    pointer-events: none;
+}
+
+.sessao-orcamento{
+    width: 100%;
+    height: 100vh;
+    background: url(./imagens/twoPeople.jpg);
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.orcamento-wrapper{
+    width: 60%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .5);
+    position: relative;
+}
+
+.sessao-orcamento h1{
+    position: absolute;
+    top: -2.5rem;
+    left: 2rem;
+    background: #50C9C3;  
+    background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3); 
+    background: linear-gradient(to right, #96DEDA, #50C9C3); 
+    padding: 0 2rem;
+    color: #ffffff;
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: lighter;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+
+.sessao-orcamento form{
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+  .sessao-orcamento label{
+    font-family: var(--font-action);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+  .sessao-orcamento input[type="number"]{
+    font-family: var(--font-secundary);
+    width: 4rem;
+    font-size: 2rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    padding: 0.3rem;
+}
+
+  .sessao-orcamento input[type="number"]{
+    font-family: var(--font-secundary);
+    width: 4rem;
+    font-size: 2rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    padding: 0.3rem;
+}
+  
+  .btn-orcamento{
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    grid-column: 2;
+}
+
+.social-list i{
+    background-color: rgb(21, 144, 153);
+    color:rgba(255, 255, 255,1);
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 1s;
+}
+
+.social-list i:hover{
+    background-color: rgb(61, 182, 190);
+}
+
+footer{
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-content p{
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+  }
+  
+  .social-list a{
+    margin: 0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+  }
+  
+  .social-list ul {
+    display: flex;
+  }
+  
+  #link-topo{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #50C9C3;  
+    background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3); 
+    background: linear-gradient(to right, #96DEDA, #50C9C3); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: .3rem;
+    box-shadow:  0 0.1rem 0.6rem #00000009;
+  }

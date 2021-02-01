@@ -15,16 +15,16 @@
         <div class="container">
 
             <div class="hamburguer">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+                <div class="line" id="line3"></div>
                 <span>fechar</span>
             </div>
         
         <div class="container">
-            <header>
+            <header id="home">
                 <div class="img-wrapper">
-                    <img src="imagens/WoodBackg.jpg" alt="">
+                    <img src="imagens/ocean.jpg" alt="">
                 </div>
                 <div class="banner">
                     <h1>Web Developer & Front End Designer</h1>
@@ -35,11 +35,11 @@
             <aside class="sidebar">
                 <nav>
                     <ul class="menu">
-                        <li class="menu-item"><a href="" class="menu-link">Home</a></li>
-                        <li class="menu-item"><a href="" class="menu-link">Conhecimentos</a></li>
-                        <li class="menu-item"><a href="" class="menu-link">Projetos</a></li>
-                        <li class="menu-item"><a href="" class="menu-link">Contato</a></li>
-                        <li class="menu-item"><a href="" class="menu-link">Orçamento</a></li>
+                        <li class="menu-item"><a href="#home" class="menu-link">Home</a></li>
+                        <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimentos</a></li>
+                        <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
+                        <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+                        <li class="menu-item"><a href="#orcamento" class="menu-link">Orçamento</a></li>
                     </ul>
                 </nav>
                 <div class="social-media">
@@ -49,7 +49,7 @@
                 </div>
             </aside>
             
-            <section class="sessao-conhecimentos">
+            <section class="sessao-conhecimentos" id="conhecimentos">
                 <div class="sessao-header">
                     <h1>Conhecimentos</h1>
                 </div>
@@ -116,9 +116,10 @@
                 </div>
             </section>
 
-            <section class="sessao-projetos">
-                <div class="sessao-header"></div>
+            <section class="sessao-projetos" id="projetos">
+                <div class="sessao-header">
                 <h1>Projetos</h1>
+                </div>
                 <div class="projetos">
                     <div class="card">
                         <div class="card-img-wrapper">
@@ -128,7 +129,7 @@
                             <h2>Dashboard</h2>
                             <h3>JavaScript, HTML e CSS</h3>
                             <p>Criamos dashboards para você analisar o seu negócio.</p>
-                            <button>Saiba Mais</button>
+                            <button class="btn">Saiba Mais</button>
                         </div>
                     </div>
                     <div class="card">
@@ -139,7 +140,7 @@
                             <h2>Todo List</h2>
                             <h3>JavaScript, HTML e CSS</h3>
                             <p>Criamos lista de tarefas para o seu site, para que você fiquei no controle do seu dia a dia.</p>
-                            <button>Saiba Mais</button>
+                            <button class="btn">Saiba Mais</button>
                         </div>
                     </div>
                     <div class="card">
@@ -150,12 +151,79 @@
                             <h2>Ferramentas Web</h2>
                             <h3>PHP e JavasCript</h3>
                             <p>Criamos ferramentas para os seus sites como relógios, controle de gastos, etc.</p>
-                            <button>Saiba Mais</button>
+                            <button class="btn">Saiba Mais</button>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <section class="sessao-contato" id="contato">
+                <div class="contato-wrapper">
+                    <div class="contato-left"></div>
+                        <div class="contato-right">
+                            <h1>Contato</h1>
+                            <form>
+                                <div class="input-group">
+                                    <input type="text" class="field" id="nome">
+                                    <label for="nome" class="field-label">Nome</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" class="field" id="email">
+                                    <label for="email" class="field-label">E-mail</label>
+                                </div>
+                                <div class="input-group">
+                                    <textarea type="field" class="field" id="mensagem"></textarea>
+                                    <label for="mensagem" class="field-label">Mensagem</label>
+                                </div>
+                                <button type="submit" class="btn btn-submit">Enviar</button>
+                            </form>
+                        </div>
+                </div>
+            </section>
+            <section class="sessao-orcamento" id="orcamento">
+                <div class="orcamento-wrapper">
+                  <h1>Faça um orçamento</h1>
+                  <form>
+                    <label for="qtde">Qtde de Páginas</label>
+                    <input type="number" min="1" name="qtde" id="qtde">
+                    <label for="js">Preciso de um script JS</label>
+                    <input type="checkbox" name="js" id="js">
+                    <label>Layout</label>
+                    <div class="group-layout">
+                      <div>
+                        <input type="radio" name="layout" id="layout-sim">
+                        <label for="layout-sim">Preciso de um layout</label>
+                      </div>
+                      <div>
+                        <input type="radio" name="layout" id="layout-nao">
+                        <label for="layout-nao">Já tenho um layout</label>
+                      </div>
+                    </div>
+                    <label for="prazo">Prazo</label>
+                    <input type="range" name="prazo" id="prazo" min="1" max="10">
+                    <label id="preco">R$ 0,00</label>
+                    <button class="btn btn-orcamento" type="submit">Enviar</button>
+                  </form>
+                </div>
+              </section>
+
+              <footer>
+                <div class="footer-content">
+                  <p>
+                    Copyright &copy; 2020, ETECIA DS - Todos os diretos reservados
+                  </p>
+                  <div class="social-list">
+                    <ul>
+                      <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                      <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </footer>
+              <a href="#home" id="link-topo">
+                <i class="fas fa-arrow-up"></i>
+              </a>
         </div>
 
     </body>
